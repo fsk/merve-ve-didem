@@ -21,14 +21,61 @@ public class Insan {
     char cinsiyet;
 
     public Insan() {
+        System.out.println("Bos constructor calisti.");
+        //System.out.println("""
+        //        Insan classindan bir tane
+        //        instnace olusturuldu
+        //        """);
+    }
 
-        System.out.println("""
-                Insan classindan bir tane 
-                instnace olusturuldu
-                """);
+    public Insan(int age, String name) {
+        if (name.length() < 2) {
+            System.out.println("Gecersiz isim girdiniz.");
+        }
+        yas = age;
+        isim = name;
 
+        System.out.println("Dolu Constructor calisti");
+    }
+
+    /**
+     * this
+     */
+    public Insan(String soyisim, char cinsiyet) {
+        this.soyisim = soyisim;
+        this.cinsiyet = cinsiyet;
+    }
+
+    /**
+     * ALT + INSERT
+     */
+    public Insan(String isim, String soyisim) {
+        System.out.println("2 parametre alan constructor.");
+        this.isim = isim;
+        this.soyisim = soyisim;
+    }
+
+    //Static Blcock
+    static {
+        System.out.println("Static block calisti.");
+    }
+
+    public Insan(int yas, String isim, String soyisim) {
+        this(isim, soyisim);
+        this.yas = yas;
+        System.out.println("3 parametre alan constructor.");
+    }
+
+    public Insan(int yas, String isim, String soyisim, char cinsiyet) {
+        this(yas, isim, soyisim);
+        this.cinsiyet = cinsiyet;
+        System.out.println("4 parametre alan constructor.");
     }
 
 
+    //Instance inital Blcok
+    {
+        System.out.println("Instance inital block calisti.");
+    }
 
 }
