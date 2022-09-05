@@ -7,4 +7,12 @@ public class Dede {
     String sacYapisi;
     String sacRengi;
 
+    public void arabaSur() {
+        System.out.println("Dede Araba suruyor.");
+    }
+
+    public void calis() {
+        System.out.println("Dede calisiyor.");
+    }
+
 }
